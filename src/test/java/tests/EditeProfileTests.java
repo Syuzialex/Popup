@@ -25,7 +25,6 @@ public class EditeProfileTests extends LandingTest {
         EditeProfilePage editeProfilePage = new EditeProfilePage();
         editeProfilePage.clickOnProfile();
         editeProfilePage.clickOnEditeProfileBtn();
-        editeProfilePage.clickOnPublicName();
         editeProfilePage.typeTextOnBirthDay();
         editeProfilePage.typeOnBirthMonth();
 

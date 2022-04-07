@@ -16,7 +16,7 @@ public class EditeProfilePage extends LandingPage {
     @FindBy(xpath = "//*[@id=\"sidebar\"]/ul/li[2]/a")
     private WebElement profile;
 
-    @FindBy(xpath = "//*[@class='btn btn-outline-primary edit-profile']")
+    @FindBy(xpath = "//*[@id=\"content\"]/section[1]//div/a")
     private WebElement editeProfile;
 
     @FindBy(id = "fullName")
@@ -57,9 +57,7 @@ public class EditeProfilePage extends LandingPage {
     }
      public void clickOnPublicName(){
         SeleniumActions.clickOnElement(fullName);
-     }
-     public void clearTextFromFullName(){
-        //SeleniumActions.removeActions(fullName);
+
      }
      public void typeTextOnFullName(){
         SeleniumActions.typeTextOnElement(fullName, "Miss S");

@@ -28,7 +28,7 @@ public class SeleniumActions {
     public static void typeTextOnElement(WebElement element, String text) {
         if (Waiters.waitForVisibility(element)) {
             System.out.println("Typing: " + text + " on element: " + element);
-            actions.sendKeys(element, text).build().perform();
+            getActions().sendKeys(element, text).build().perform();
             System.out.println("Typed: " + text + " on element: " + element);
 
         } else System.out.println("element is not visible");

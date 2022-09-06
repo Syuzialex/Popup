@@ -1,5 +1,6 @@
 package utils;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -21,5 +22,13 @@ public class SeleniumActions {
         } else System.out.println("element is not visible");
 
     }
-}
 
+    public static void clearText(WebElement element) {
+        if (Waiters.waitForVisibility(element)) {
+            System.out.println("Clear: " + " on element: " + element);
+            actions.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.BACK_SPACE)
+                    .build().perform();
+            System.out.println("Cleared: " + " on element: " + element);
+        }
+    }
+}
